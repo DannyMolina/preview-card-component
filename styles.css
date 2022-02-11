@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Inter letra 
+    
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1020px;
+}
+.wrapper{
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.image-component img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-component {
+    position: relative;
+}
+
+.image-component::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(277, 64%, 61%, 0.6);
+}
+
+.text-component{
+    padding: 10%;
+}
+.tittle{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter', sans-serif; 
+    font-weight: 700;
+    padding-bottom: 22px;
+    margin: 0 auto;
+}
+.tittle span{
+    color: hsl(277, 64%, 61%, 0.6);;
+}
+.description{
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    font: 15px;
+    line-height: 1.6;
+}
+
+ .stadistic{
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+
+.stadistic p.num{
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 7px ;
+}
+
+.stadistic p{
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media only screen and (max-width:768px) and (min-width:426px){
+    body{
+        font-size: 12px;
+    }
+
+    .text-component{
+        padding: 12%;
+    }
+
+    .tittle{
+        font-size: 22px;
+    }
+
+    .stadistic{ 
+        padding-top: 30px;
+    }
+
+    .stadistic p.num{
+        font-size: 17px ;
+    }
+}
+
+
+
+@media only screen and (max-width: 425px){
+    body{
+        text-align: center;
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr ;
+    }
+
+    .image-component{
+        order: -1;
+    }
+
+    .text-component{
+        padding: 12% 8%;
+    }
+
+    .tittle{
+        font-size: 26px;
+        line-height: 1.3;
+    }
+    .stadistic{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .stadistic div {
+        margin-top: 20px;
+    }
+}
